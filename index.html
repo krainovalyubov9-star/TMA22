@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharmDesign | Магазин декора</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка с корзиной -->
+    <header class="main-header">
+        <div class="logo">
+            <i class="fas fa-couch"></i>
+            <h1>CharmDesign</h1>
+        </div>
+        <div class="cart-icon" id="cartBtn">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Категории (5 штук) -->
+    <section class="categories">
+        <h2><i class="fas fa-compass"></i> Исследуй</h2>
+        <div class="category-grid">
+            <div class="category-card" data-cat="vases">
+                <i class="fas fa-wine-bottle"></i>
+                <span>Вазы</span>
+                <small>12 товаров</small>
+            </div>
+            <div class="category-card" data-cat="candles">
+                <i class="fas fa-fire"></i>
+                <span>Свечи</span>
+                <small>9 товаров</small>
+            </div>
+            <div class="category-card" data-cat="textile">
+                <i class="fas fa-tshirt"></i>
+                <span>Текстиль</span>
+                <small>7 товаров</small>
+            </div>
+            <div class="category-card" data-cat="paintings">
+                <i class="fas fa-paint-brush"></i>
+                <span>Картины</span>
+                <small>6 товаров</small>
+            </div>
+            <div class="category-card" data-cat="reviews">
+                <i class="fas fa-star"></i>
+                <span>Отзывы</span>
+                <small>✨</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок с заголовком категории и кнопкой назад -->
+    <div class="section-header" id="sectionHeader">
+        <h2 id="categoryTitle">Все товары</h2>
+        <button class="back-btn" id="backBtn"><i class="fas fa-arrow-left"></i> Назад</button>
+    </div>
+
+    <!-- Список товаров / отзывов -->
+    <section class="products" id="productList"></section>
+
+    <!-- Корзина -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Моя корзина</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Корзина пока пуста...</p>
+        </div>
+        <div class="cart-total">
+            <span>Итого:</span>
+            <span id="cartTotal">0 ₽</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">✨ Оформить заказ</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
